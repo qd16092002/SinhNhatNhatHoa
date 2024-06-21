@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 function TimeDown() {
   const navigate = useNavigate();
-  const targetDate = new Date('2024-06-21T17:43:00');
+  const targetDate = new Date('2024-06-23T00:00:00');
 
   const calculateTimeLeft = () => {
     const now = new Date();
