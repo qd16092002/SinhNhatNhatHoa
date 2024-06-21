@@ -25,13 +25,13 @@ function Home() {
         setProgress((prevProgress) => {
           if (prevProgress >= 100) {
             clearInterval(interval);
-            setLoading(false); // Đặt loading về false khi hoàn tất
-            setActiveTab(TABS.ACTIVETAB); // Chuyển tab khi loading hoàn tất
+            setLoading(false); // Set loading to false when complete
+            setActiveTab(TABS.ACTIVETAB); // Switch tab when loading is complete
             return 100;
           }
           return prevProgress + 1;
         });
-      }, 30); // Tốc độ tăng phần trăm, bạn có thể điều chỉnh giá trị này
+      }, 30); // Speed of progress increase, you can adjust this value
     }
     return () => clearInterval(interval);
   }, [loading]);
@@ -63,15 +63,17 @@ function Home() {
               </button>
             </div>
           </div>
-          <div className={cx('footer')}>
-            <div className={cx('bgloading')}>
-              <div className={cx('loading')} style={{ width: `${progress}%` }}></div>
+          {loading && (
+            <div className={cx('footer')}>
+              <div className={cx('bgloading')}>
+                <div className={cx('loading')} style={{ width: `${progress}%` }}></div>
+              </div>
+              <div className={cx('line2')}>
+                <div className={cx('text')}>Loadinggg ...</div>
+                <div className={cx('text')}>{progress}%</div>
+              </div>
             </div>
-            <div className={cx('line2')}>
-              <div className={cx('text')}>Loadinggg ...</div>
-              <div className={cx('persent')}>{progress}%</div>
-            </div>
-          </div>
+          )}
         </>
       )}
       {activeTab.code === TABS.ACTIVETAB.code && (

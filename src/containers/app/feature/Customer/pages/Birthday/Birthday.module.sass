@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+.button_letter
+    background-color: #ffffff00
+    border: none
+
+    &:hover
+        cursor: pointer
+@keyframes fadeInUp
+    0%
+        opacity: 0
+        mask-image: linear-gradient(to bottom, transparent 0%, black 100%)
+
+    100%
+        opacity: 1
+        mask-image: linear-gradient(to bottom, black 0%, black 100%)
+
+.fade-up
+    animation: fadeInUp 2s ease-in-out infinite
+
+@keyframes letterup
+    0%
+        opacity: 0
+        transform: scale(0.5)
+        mask-image: linear-gradient(to bottom, transparent 0%, black 100%)
+
+    100%
+        opacity: 1
+        transform: scale(1)
+        mask-image: linear-gradient(to bottom, black 0%, black 100%)
+
+.image_button
+    height: 100%
+    width: 100%
+.home-wrapper
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/investy-b17a1.appspot.com/o/Hoa%2Fbacknew.png?alt=media&token=97b5a371-2eae-4f13-9c67-327ac7422c43')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    height: 100vh
+    width: 100vw
+    align-content: center
+    .letter
+        animation: letterup 2s ease-in-out forwards
+        width: 70%
+        background-color: #ffffff
+        margin-top: 80px
+        margin-bottom: 40px
+        margin-left: 15%
+        border: 1px solid #000000
+        border-radius: 7px
+        padding: 2%
+        .thangui
+            font-family: Be Vietnam Pro
+            font-size: 24px
+            font-weight: 400
+            line-height: 24px
+            letter-spacing: -0.30000001192092896px
+            text-align: left
+            color: #222222
+        .content
+            margin-top: 20px
+            margin-left: 5%
+            font-family: Be Vietnam Pro
+            font-size: 15px
+            font-weight: 300
+            line-height: 30px
+            letter-spacing: -0.3000000119px
+            text-align: left
+            color: #222222
+            width: 85%
+        .content_2
+            margin-top: 5px
+            margin-left: 4%
+            font-family: Be Vietnam Pro
+            font-size: 15px
+            font-weight: 300
+            line-height: 30px
+            letter-spacing: -0.3000000119px
+            text-align: left
+            color: #222222
+            width: 90%
+        .image_letter
+            width: 23%
+            margin-top: -2%
+            margin-right: -2%

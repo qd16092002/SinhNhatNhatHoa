@@ -2,6 +2,7 @@ import AppLayout from '@src/components/Layouts/AppLayout'
 // import { USER_ROLE } from '@src/configs'
 // import RequireAuth from '@src/routes/RequireAuth'
 import Home from './pages/Home'
+import Birthday from './pages/Birthday'
 
 export const customerRouteList = [
   {
@@ -24,7 +25,7 @@ export const customerRouteList = [
     path: '/birthday',
     element: (
       <AppLayout>
-        <Home />
+        <Birthday />
       </AppLayout>
     )
   },
