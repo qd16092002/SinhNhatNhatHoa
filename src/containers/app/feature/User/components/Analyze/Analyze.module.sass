@@ -1,0 +1,168 @@
+@import ../../../../../../components/GlobalStyles/_variables
+@import ../../../../../../components/GlobalStyles/_mixins
+
+.analyze
+  width: 100%
+  // height: 166px
+  background: #464F9F
+  border-radius: 16px
+  padding: 16px
+
+  .content
+    display: flex
+    gap: 24px
+
+    img
+      width: 69.4px
+      height: 78px
+
+    .text
+
+      .top
+        font-weight: 600
+        font-size: 1.8rem
+        line-height: 180%
+        color: #FFFFFF
+
+      .bottom
+        margin-top: 4px
+        font-weight: 500
+        font-size: 1.4rem
+        line-height: 150%
+        color: #EBEBEB
+
+  .btn
+    margin-top: 16px
+    width: 100%
+
+.content-wrapper
+
+  .heading
+    display: flex
+    justify-content: space-between
+    height: 44px
+    align-items: center
+    margin-bottom: 24px
+
+    .text
+      font-weight: 600
+      line-height: 140%
+      color: $neutral-1
+      font-size: 20px
+    .close
+      @include center
+      height: 44px
+      width: 44px
+      background: $accent-5
+      border-radius: 12px
+  .history
+    background: $accent-5
+    padding: 8px
+    border-radius: 8px
+
+    .heading
+      display: flex
+      gap: 12px
+      justify-content: start
+
+      p
+        display: block
+        font-weight: 600
+        line-height: 150%
+        color: $neutral-1
+
+    .submit-list
+      display: flex
+      flex-direction: column
+      gap: 12px
+
+      .submit-item,.submit-item--active
+        display: flex
+        justify-content: space-between
+        cursor: pointer
+        transition: all 0.2s ease
+
+      .submit-item
+        color: $neutral-1
+
+        &:hover
+          opacity: 0.9
+
+        .__left
+          font-size: 12px
+          font-weight: 500
+
+        .__right
+          font-size: 10px
+          font-weight: 500
+          line-height: 150%
+      .submit-item--active
+        .__left
+          color: #B0AEFF
+
+        .__right
+          color: #B0AEFF
+
+      .divider
+        height: 1px
+        width: full
+        background: $accent-6
+
+  .score-wrapper
+
+    .score
+      width: 100%
+      height: auto
+      border-radius: 8px
+      border: 2px solid $accent-5
+      padding: 8px
+      color: $neutral-1
+      font-weight: 600
+      line-height: 150%
+
+      .name
+        font-size: 14px
+        @include mobile
+          font-size: 12px
+      .value
+        font-size: 18px
+        @include mobile
+          font-size: 12px
+
+  .chart
+    margin-top: 24px
+
+    .filter
+      display: flex
+      font-size: 14px
+      color: $neutral-1
+      font-weight: 600
+      line-height: 150%
+      margin-bottom: 24px
+      gap: 12px
+
+      .item, .item-active
+        padding: 6px 12px
+        border-radius: 12px
+        cursor: pointer
+        transition: all .2s ease
+        @include mobile
+          padding: 4px
+          font-size: 10px
+
+      .item-active
+        background-image: $primary-1
+
+        &:hover
+          opacity: 0.9
+
+      .item
+        &:hover
+          background-image: $accent-5
+          opacity: 0.5
+
+.data-notify
+  @include center
+  color: $neutral-1
+  font-size: 18px
+  font-weight: 500

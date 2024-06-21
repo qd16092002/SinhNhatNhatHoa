@@ -1,0 +1,425 @@
+@import  ../../../../../../components/GlobalStyles/_variables
+@import  ../../../../../../components/GlobalStyles/_mixins
+
+.models
+  width: 100%
+  background: #212A4A
+  border-radius: 20px
+  padding: 24px
+  margin-top: 32px
+  box-sizing: border-box
+
+  .heading
+    height: 37px
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+    .text
+      font-weight: 600
+      font-size: 1.8rem
+      line-height: 180%
+      color: #EBEBEB
+
+    .btn
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 8px 16px
+      gap: 6px
+      width: 173px
+      height: 37px
+      background: #2F4C78
+      border-radius: 16px
+      font-weight: 600
+      font-size: 1.4rem
+      line-height: 150%
+      color: #FFFFFF
+
+  .table
+    margin-top: 26.5px
+
+    @media (max-width: $large-desktop-width)
+      overflow-x: scroll
+
+    table
+      width: 100%
+
+      @media (max-width: $large-desktop-width)
+        width: 200%
+
+      tr
+
+        th
+          height: 48px
+          padding: 13.5px 10px
+          background: #313C65
+          font-weight: 500
+          font-size: 1.2rem
+          line-height: 150%
+          text-align: start
+          color: #9DA7BA
+
+      tr
+
+        td
+          height: 48px
+          padding: 13.5px 10px
+          font-weight: 600
+          font-size: 1.4rem
+          line-height: 150%
+          text-align: start
+          color: #FFFFFF
+
+      .tc
+        color: #726BD3
+
+      .symbol
+        cursor: pointer
+        &:hover
+          opacity: 0.9
+
+      .stake
+        color: #36A9E1
+
+      .trend
+        display: flex
+        align-content: flex-end
+
+      .status
+
+        .active, .inactive
+          padding: 4px 8px
+          gap: 10px
+          width: 62px
+          height: 29px
+          border-radius: 16px
+          font-weight: 600
+          font-size: 1.4rem
+          line-height: 150%
+
+        .active
+          background: #34503D
+          color: #84E4A4
+
+        .inactive
+          background: #482E29
+          color: #FF7373
+
+.submit-modal
+  width: 100%
+  height: 100%
+
+  .heading
+    font-weight: 600
+    font-size: 1.8rem
+    line-height: 180%
+    color: #FFFFFF
+    text-align: center
+
+  .desc
+    font-weight: 500
+    font-size: 1.4rem
+    line-height: 150%
+    color: #9DA7BA
+
+  .input
+    width: 100%
+    gap: 12px
+    width: 100%
+    height: 123px
+    background: #3C4C64
+    border: 1px dashed #5E687C
+    border-radius: 12px
+
+    label
+      width: 100%
+      height: 100%
+      padding: 12px
+      cursor: pointer
+
+      .img
+        display: flex
+        justify-content: center
+
+      .text
+        font-weight: 600
+        font-size: 1.4rem
+        line-height: 150%
+        text-align: center
+        color: #FFFFFF
+        margin-top: 12px
+
+      p
+        font-weight: 500
+        font-size: 1.2rem
+        line-height: 150%
+        text-align: center
+        color: #9DA7BA
+
+    input
+      display: none
+
+  .action
+    display: flex
+    gap: 24px
+    margin-top: 16px
+
+.select-symbol-wrapper
+  display: flex
+  gap: 16px
+  .custom-select-wrapper
+    width: 100%
+    margin: 0 auto
+    // display: flex
+    gap: 24px
+    position: relative
+    margin-top: 32px
+
+    .custom-select
+      width: 100%
+      position: relative
+
+      .selected-option
+        width: 100%
+        height: 40px
+        border-radius: 8px
+        background: $accent-6
+        display: flex
+        align-items: center
+        padding-left: 12px
+        font-size: 1.6rem
+        font-weight: 500
+        color: white
+
+      .arrow
+        position: absolute
+        top: 17px
+        right: 15px
+        transition: all 0.15s ease-in-out
+
+    .options
+      width: 100%
+      padding: 8px
+      background: $accent-6
+      margin-top: 2px
+      border-radius: 4px
+      position: absolute
+      top: 46px
+      left: 0
+      right: 0
+      z-index: 100
+      height: 140px
+      overflow-y: scroll
+
+      .option
+        width: 100%
+        height: 40px
+        display: flex
+        align-items: center
+        padding-left: 12px
+        font-size: 1.6rem
+        font-weight: 500F
+        border-radius: 2px
+        color: white
+        transition: all 0.2s ease
+        cursor: pointer
+
+        &:hover
+          background: #3C4C64
+          border-radius: 8px
+  .form-field
+    margin: 24px 0
+    width: 100%
+    display: flex
+    position: relative
+
+    input
+      display: flex
+      align-items: center
+      outline: none
+      padding: 10px 12px
+      gap: 12px
+      width: 100%
+      height: 40px
+      background: $accent-6
+      border: 1px solid #29384E
+      border-radius: 8px
+      font-weight: 500
+      font-size: 1.6rem
+      line-height: 24px
+      display: flex
+      align-items: center
+      color: white
+      margin-top: 8px
+
+    .suggest-symbol
+      position: absolute
+      padding: 8px
+      top: 54px
+      width: 100%
+      height: 140px
+      background: $accent-6
+      border-radius: 8px
+      overflow-y: scroll
+      .symbol
+        width: 100%
+        height: 40px
+        display: flex
+        align-items: center
+        padding-left: 12px
+        font-size: 1.4rem
+        font-weight: 500
+        border-radius: 2px
+        color: white
+        transition: all 0.2s ease
+        cursor: pointer
+
+        &:hover
+          background: #3C4C64
+          border-radius: 8px
+
+.delete-action
+  color: #FF7373
+
+  &:hover
+    transition: all 0.2s ease
+    cursor: pointer
+    opacity: 0.8
+
+.content-wrapper
+
+  .heading
+    display: flex
+    justify-content: space-between
+    height: 44px
+    align-items: center
+    margin-bottom: 24px
+
+    .text
+      font-weight: 600
+      line-height: 140%
+      color: $neutral-1
+      font-size: 20px
+    .close
+      @include center
+      height: 44px
+      width: 44px
+      background: $accent-5
+      border-radius: 12px
+  .history
+    background: $accent-5
+    padding: 8px
+    border-radius: 8px
+
+    .heading
+      display: flex
+      gap: 12px
+      justify-content: start
+
+      p
+        display: block
+        font-weight: 600
+        line-height: 150%
+        color: $neutral-1
+
+    .submit-list
+      display: flex
+      flex-direction: column
+      gap: 12px
+
+      .submit-item,.submit-item--active
+        display: flex
+        justify-content: space-between
+        cursor: pointer
+        transition: all 0.2s ease
+
+      .submit-item
+        color: $neutral-1
+
+        &:hover
+          opacity: 0.9
+
+        .__left
+          font-size: 12px
+          font-weight: 500
+
+        .__right
+          font-size: 10px
+          font-weight: 500
+          line-height: 150%
+      .submit-item--active
+        .__left
+          color: #B0AEFF
+
+        .__right
+          color: #B0AEFF
+
+      .divider
+        height: 1px
+        width: full
+        background: $accent-6
+
+  .score-wrapper
+    display: flex
+    gap: 16px
+
+    .score
+      // width: 100%
+      height: auto
+      border-radius: 8px
+      border: 2px solid $accent-5
+      padding: 16px
+      color: $neutral-1
+      font-weight: 600
+      line-height: 150%
+      display: flex
+      flex-direction: column
+      gap: 12px
+
+      .name
+        font-size: 14px
+        @include mobile
+          font-size: 12px
+      .value
+        font-size: 18px
+        @include mobile
+          font-size: 12px
+
+  .chart
+    margin-top: 24px
+
+    .filter
+      display: flex
+      font-size: 14px
+      color: $neutral-1
+      font-weight: 600
+      line-height: 150%
+      margin-bottom: 24px
+      gap: 12px
+
+      .item, .item-active
+        padding: 6px 12px
+        border-radius: 12px
+        cursor: pointer
+        transition: all .2s ease
+        @include mobile
+          padding: 4px
+          font-size: 10px
+
+      .item-active
+        background-image: $primary-1
+
+        &:hover
+          opacity: 0.9
+
+      .item
+        &:hover
+          background-image: $accent-5
+          opacity: 0.5
+
+.data-notify
+  @include center
+  color: $neutral-1
+  font-size: 18px
+  font-weight: 500

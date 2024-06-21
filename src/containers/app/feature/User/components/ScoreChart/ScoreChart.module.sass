@@ -1,0 +1,44 @@
+@import ../../../../../../components/GlobalStyles/_variables
+@import ../../../../../../components/GlobalStyles/_mixins
+
+.chart
+  width: 100%
+  background: #212A4A
+  border-radius: 20px
+  padding: 24px
+
+  .heading
+    display: flex
+    justify-content: space-between
+
+    .left
+
+      .top
+        font-weight: 500
+        font-size: 1.4rem
+        line-height: 150%
+        color: var(--neutral-1)
+
+      .bottom
+        font-weight: 600
+        font-size: 2.4rem
+        line-height: 140%
+        background: linear-gradient(96.06deg, #526AEA 4.1%, #B0AEFF 146.32%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+
+    .right
+      width: 180px
+
+  .main-chart
+    height: 241px
+    width: 100%
+    margin-top: 24px
+    @include center
+
+.data-noti
+  color: $neutral-1
+  font-size: 18px
+  font-weight: 500

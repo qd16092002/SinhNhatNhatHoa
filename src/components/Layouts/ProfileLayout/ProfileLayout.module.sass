@@ -1,0 +1,23 @@
+@import '../../../components/GlobalStyles/_variables'
+
+.profile-layout
+    padding: 140px 0px
+
+    .main-content
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: $desktop-width)
+            flex-direction: column
+
+        .left
+            width: 30%
+
+            @media (max-width: $desktop-width)
+                width: 100%
+
+        .right
+            width: 65%
+
+            @media (max-width: $desktop-width)
+                width: 100%
