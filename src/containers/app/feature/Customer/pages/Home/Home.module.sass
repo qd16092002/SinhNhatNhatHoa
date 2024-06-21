@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@keyframes letterup
+    0%
+        opacity: 0
+        transform: scale(0.5)
+        mask-image: linear-gradient(to bottom, transparent 0%, black 100%)
 
+    100%
+        opacity: 1
+        transform: scale(1)
+        mask-image: linear-gradient(to bottom, black 0%, black 100%)
 .home-wrapper
     background-image: url('https://firebasestorage.googleapis.com/v0/b/investy-b17a1.appspot.com/o/Hoa%2Fbacknew.png?alt=media&token=97b5a371-2eae-4f13-9c67-327ac7422c43')
     background-size: cover
@@ -9,6 +18,7 @@
     width: 100vw
     align-content: center
     .box_button
+        animation: letterup 1s ease-in-out forwards
         border: 1px solid #000000
         border-radius: 8px
         height: 50vh

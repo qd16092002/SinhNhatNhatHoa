@@ -4,7 +4,7 @@ import classNames from 'classnames/bind'
 import styles from './Header.module.sass'
 import { Link, useLocation } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
-import { IconBirthday, IconImage, IconTimeDown, IconTimeLine } from '@src/assets/svgs/Header'
+import { IconBirthday, IconImage, IconTimeLine } from '@src/assets/svgs/Header'
 const cx = classNames.bind(styles)
 const menuUser = [
   {
@@ -22,11 +22,6 @@ const menuUser = [
     link: '/timeline',
     icon: <IconTimeLine />
   },
-  {
-    title: 'Đếm ngược nha',
-    link: '/timedown',
-    icon: <IconTimeDown />
-  }
 ]
 function Header() {
   const location = useLocation()

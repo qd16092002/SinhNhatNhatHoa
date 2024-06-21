@@ -3,10 +3,12 @@ import AppLayout from '@src/components/Layouts/AppLayout'
 // import RequireAuth from '@src/routes/RequireAuth'
 import Home from './pages/Home'
 import Birthday from './pages/Birthday'
+import ImageWe from './pages/ImageWe'
+import TimeDown from './pages/TimeDown'
 
 export const customerRouteList = [
   {
-    path: '/',
+    path: '/home',
     element: (
       <AppLayout>
         <Home />
@@ -14,10 +16,10 @@ export const customerRouteList = [
     )
   },
   {
-    path: '/timedown',
+    path: '/',
     element: (
       <AppLayout>
-        <Home />
+        <TimeDown />
       </AppLayout>
     )
   },
@@ -33,7 +35,7 @@ export const customerRouteList = [
     path: '/image',
     element: (
       <AppLayout>
-        <Home />
+        <ImageWe />
       </AppLayout>
     )
   },
