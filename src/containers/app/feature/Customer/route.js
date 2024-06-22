@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Birthday from './pages/Birthday'
 import ImageWe from './pages/ImageWe'
 import TimeDown from './pages/TimeDown'
+import TimeLine from './pages/TimeLine'
 
 export const customerRouteList = [
 
@@ -43,7 +44,7 @@ export const customerRouteList = [
     path: '/timeline',
     element: (
       <AppLayout>
-        <Home />
+        <TimeLine />
       </AppLayout>
     )
   }
