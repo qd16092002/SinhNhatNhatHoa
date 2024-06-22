@@ -10,7 +10,7 @@ import { IconBirthday, IconImage, IconTimeLine } from '@src/assets/svgs/Header';
 const cx = classNames.bind(styles);
 
 // Thời gian đích: 0h ngày 23/6
-const targetDate = new Date('2024-06-22T09:46:00');
+const targetDate = new Date('2024-06-23T00:00:00');
 
 const menuUserTemplate = [
   {
