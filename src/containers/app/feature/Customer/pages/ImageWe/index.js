@@ -1,23 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './ImageWe.module.sass';
 
 const cx = classNames.bind(styles);
 
+// Dynamically import all images from the 'images' folder
+const importAll = (requireContext) => requireContext.keys().map(requireContext);
+const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
+
 function ImageWe() {
-  const images = [
-    'https://firebasestorage.googleapis.com/v0/b/investy-b17a1.appspot.com/o/Hoa%2FN%E1%BB%81n.jpg?alt=media&token=51ce0a6e-7718-447f-8b06-bf9631023077',
-    'https://firebasestorage.googleapis.com/v0/b/investy-b17a1.appspot.com/o/Hoa%2Flove-letter_1f48c.png?alt=media&token=abadd707-4f2d-482d-bb1e-65788a228b8b',
-    'https://firebasestorage.googleapis.com/v0/b/investy-b17a1.appspot.com/o/Hoa%2Fbacknew.png?alt=media&token=97b5a371-2eae-4f13-9c67-327ac7422c43',
-  ];
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState('');
+
+  const openModal = (image) => {
+    setCurrentImage(image);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setCurrentImage('');
+  };
 
   return (
     <div className={cx('image-wrapper')}>
       {images.map((image, index) => (
-        <div key={index} className={cx('image-container')}>
-          <img src={image} alt={`${index + 1}`} className={cx('image')}></img>
-        </div>
+        <button key={index} className={cx('image-container')} onClick={() => openModal(image)}>
+          <img src={image.default} alt={`${index + 1}`} className={cx('image')} />
+          <div className={cx('overlay')}>
+            <div className={cx('text')}>Yêu em ❤️❤️❤️</div>
+          </div>
+        </button>
       ))}
+
+      {isModalOpen && (
+        <button className={cx('modal')} onClick={closeModal}>
+          <button className={cx('close')} onClick={closeModal}>&times;</button>
+          <img className={cx('modal-content')} src={currentImage.default} alt="Enlarged" />
+        </button>
+      )}
     </div>
   );
 }
